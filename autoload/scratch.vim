@@ -28,13 +28,8 @@ function! s:open_window(position)
     execute 'setlocal filetype=' . g:scratch_filetype
     setlocal bufhidden=hide
     setlocal nobuflisted
-    setlocal buftype=nofile
     setlocal foldcolumn=0
-    setlocal nofoldenable
-    setlocal nonumber
     setlocal noswapfile
-    setlocal winfixheight
-    setlocal winfixwidth
     if strlen(g:scratch_persistence_file) > 0
         if filereadable(g:scratch_persistence_file)
             let read_cmd = ':r ' . g:scratch_persistence_file
