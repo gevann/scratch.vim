@@ -35,11 +35,3 @@ nnoremap <silent> <plug>(scratch-insert-reuse) :call scratch#insert(0)<cr>
 nnoremap <silent> <plug>(scratch-insert-clear) :call scratch#insert(1)<cr>
 xnoremap <silent> <plug>(scratch-selection-reuse) :<c-u>call scratch#selection(0)<cr>
 xnoremap <silent> <plug>(scratch-selection-clear) :<c-u>call scratch#selection(1)<cr>
-
-if !exists('g:scratch_no_mappings')
-  nmap gs <plug>(scratch-insert-reuse)
-  nmap gS <plug>(scratch-insert-clear)
-  xmap gs <plug>(scratch-selection-reuse)
-  xmap gS <plug>(scratch-selection-clear)
-  nnoremap gZzZz gs
-endif
