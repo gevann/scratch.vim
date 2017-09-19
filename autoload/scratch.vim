@@ -27,6 +27,7 @@ function! s:open_window(position)
     execute a:position . s:resolve_size(g:scratch_height) . cmd . ' __Scratch__'
     execute 'setlocal filetype=' . g:scratch_filetype
     setlocal bufhidden=hide
+    setlocal buftype=nofile
     setlocal nobuflisted
     setlocal foldcolumn=0
     setlocal noswapfile
